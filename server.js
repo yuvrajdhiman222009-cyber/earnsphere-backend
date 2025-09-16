@@ -8,6 +8,7 @@ const session = require('express-session');
 const Razorpay = require('razorpay');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -30,6 +31,14 @@ const razorpay = new Razorpay({
 // ---------------- MIDDLEWARES ----------------
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// ---------------- CORS ----------------
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "https://earnsphere.vercel.app";
+app.use(cors({
+  origin: FRONTEND_ORIGIN,
+  credentials: true
+}));
+
 app.use(session({
   secret: process.env.SESSION_SECRET || 'change_this_secret',
   resave: false,
