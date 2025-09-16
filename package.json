@@ -1,4 +1,17 @@
 {
+<<<<<<< HEAD
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.5",
+    "nodemailer": "^7.0.6",
+    "razorpay": "^2.9.6"
+=======
   "name": "earnsphere-backend",
   "version": "1.0.0",
   "main": "server.js",
@@ -14,5 +27,6 @@
     "nodemailer": "^6.9.7",
     "pg": "^8.11.1",
     "razorpay": "^2.9.0"
+>>>>>>> f6dcadf18a51a2c7aa30fbda33304e523c5db8f9
   }
 }

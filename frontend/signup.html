@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarnSphere - Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #00f2fe, #4facfe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      width: 350px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #4facfe;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Sign Up</h1>
+    <input type="email" id="email" placeholder="Enter Email" required>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button onclick="signup()">Sign Up</button>
+    <a href="login.html">Already have an account? Login</a>
+  </div>
+
+  <script>
+    function signup() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if(email && password) {
+        localStorage.setItem('userEmail', email);
+        localStorage.setItem('userPassword', password);
+        alert("Sign up successful! Please login.");
+        window.location.href = "login.html";
+      } else {
+        alert("Please fill all fields");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EarnSphere Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a12;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg,#00f2fe,#4facfe);
+      padding: 25px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 800;
+      color: #000;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      box-shadow: 0 0 30px rgba(0,242,254,0.6);
+    }
+    nav {
+      text-align: center;
+      background: #111;
+      padding: 12px;
+    }
+    nav a {
+      color: #00f2fe;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover { color: #ffd700; }
+
+    section { padding: 50px 20px; max-width: 1400px; margin: auto; }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 34px;
+      color: #00f2fe;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p.center { text-align: center; max-width: 900px; margin: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+    .card {
+      background: linear-gradient(145deg,#161623,#1f1f2f);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,242,254,0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0,242,254,0.5), 0 0 15px rgba(255,215,0,0.4);
+    }
+    .card h3 { color: #ffd700; margin: 12px 0; }
+    .card p { color: #ccc; font-size: 14px; }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      border-radius: 25px;
+      background: linear-gradient(90deg,#00f2fe,#4facfe);
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .card a:hover { background: #ffd700; color: #000; }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 20px;
+    }
+    .review {
+      background: #161623;
+      padding: 20px;
+      border-radius: 15px;
+      font-style: italic;
+      border: 1px solid rgba(0,242,254,0.2);
+    }
+    .review h4 { margin-top: 10px; color: #ffd700; }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00f2fe;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover { color: #ffd700; }
+  </style>
+</head>
+<body>
+
+  <header>EarnSphere Dashboard</header>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="terms.html">Terms</a>
+    <a href="contact.html">Contact</a>
+    <a href="upcoming.html">Upcoming</a>
+  <a href="social.html">Social</a>
+<a href="guide.html">Guide</a>
+  <!-- About -->
+  <section>
+    <h2>About EarnSphere</h2>
+    <p class="center">
+      Welcome to <b>EarnSphere</b> — the ultimate one-stop dashboard for referral programs and apps. 
+      Explore 40 trusted platforms, sign up quickly, and maximize your commissions. 
+      Our mission: make earning online simple, powerful, and accessible for everyone.
+    </p>
+  </section>
+
+<!-- Referral Programs -->
+<section>
+  <h2>Top 20 Referral Programs</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Amazon Associates</h3>
+      <p>Earn from the world’s largest marketplace.</p>
+      <a href="https://affiliate-program.amazon.in/signup">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Flipkart Affiliate</h3>
+      <p>India’s top e-commerce affiliate program.</p>
+      <a href="https://affiliate.flipkart.com/registerme">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Meesho</h3>
+      <p>Trusted reseller platform to grow income.</p>
+      <a href="https://affiliate.meesho.com/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>ClickBank</h3>
+      <p>Global marketplace for digital products.</p>
+      <a href="https://www.clickbank.com/create-your-affiliate-account/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>CJ Affiliate</h3>
+      <p>Affiliate network with global brands.</p>
+      <a href="https://www.cj.com/signup">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>ShareASale</h3>
+      <p>Promote thousands of partner merchants.</p>
+      <a href="https://www.shareasale.com/info/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Impact</h3>
+      <p>Partner with top global companies.</p>
+      <a href="https://impact.com/get-started/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Rakuten</h3>
+      <p>Build revenue with global retailers.</p>
+      <a href="https://rakutenadvertising.com/affiliate/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Shopify Affiliate</h3>
+      <p>Earn by promoting Shopify stores.</p>
+      <a href="https://www.shopify.in/affiliates">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Fiverr Affiliates</h3>
+      <p>Promote freelance services worldwide.</p>
+      <a href="https://affiliates.fiverr.com/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Upwork</h3>
+      <p>Refer clients & freelancers globally.</p>
+      <a href="https://www.upwork.com/affiliates/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Bluehost</h3>
+      <p>Hosting affiliate with huge payouts.</p>
+      <a href="https://www.bluehost.com/affiliates">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>HostGator</h3>
+      <p>Earn by promoting hosting services.</p>
+      <a href="https://www.hostgator.com/affiliates">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>AWeber</h3>
+      <p>Email marketing affiliate program.</p>
+      <a href="https://www.aweber.com/affiliates.htm">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>GetResponse</h3>
+      <p>Earn with powerful email tools.</p>
+      <a href="https://www.getresponse.com/partners/affiliate">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Canva</h3>
+      <p>Earn commissions by promoting Canva.</p>
+      <a href="https://www.canva.com/affiliates/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>SEMRush</h3>
+      <p>Refer marketers to SEM tools.</p>
+      <a href="https://www.semrush.com/affiliate/">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Grammarly</h3>
+      <p>Affiliate program for writing tool.</p>
+      <a href="https://www.grammarly.com/affiliates">Sign Up & Start Earning</a>
+    </div>
+    <div class="card">
+      <h3>Coursera</h3>
+      <p>Promote online education globally.</p>
+      <a href="https://www.coursera.org/affiliates">Sign Up & Start Earning</a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Referral Apps -->
+<section>
+  <h2>Top 20 Referral Apps</h2>
+  <div class="grid">
+    <div class="card"><h3>Paytm</h3><p>Invite users & earn cashbacks.</p><a href="https://paytm.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>PhonePe</h3><p>Refer and earn rewards instantly.</p><a href="https://www.phonepe.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Swiggy</h3><p>Food delivery referral rewards.</p><a href="https://www.swiggy.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Zomato</h3><p>Earn by referring foodies.</p><a href="https://www.zomato.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>BYJU’S</h3><p>Refer learners and earn commissions.</p><a href="https://www.byjus.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>CashKaro</h3><p>Get cashback when you refer friends.</p><a href="https://www.cashkaro.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Dream11</h3><p>Fantasy sports referral program.</p><a href="https://www.dream11.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Myntra</h3><p>Fashion shopping referral rewards.</p><a href="https://www.myntra.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>OYO</h3><p>Refer users to OYO stays.</p><a href="https://www.oyorooms.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Uber</h3><p>Invite riders/drivers & earn.</p><a href="https://www.uber.com/in/en/affiliates/">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Ola</h3><p>Refer users to Ola rides.</p><a href="https://www.olacabs.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Google Pay</h3><p>Earn cashback for referrals.</p><a href="https://paytm.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Amazon Pay</h3><p>Refer & earn via wallet cashback.</p><a href="https://www.amazon.in/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Freecharge</h3><p>Wallet referral cashback rewards.</p><a href="https://www.freecharge.in/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>MobiKwik</h3><p>Refer & earn wallet money.</p><a href="https://www.mobikwik.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>PayPal</h3><p>Earn for inviting businesses.</p><a href="https://www.paypal.com/in/webapps/mpp/affiliate-program">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Airtel Thanks</h3><p>Refer users and earn data/cash.</p><a href="https://www.airtel.in/thanks/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Jio</h3><p>Referral rewards for Jio apps.</p><a href="https://www.jio.com/affiliate">Sign Up & Start Earning</a></div>
+    <div class="card"><h3>Spotify</h3><p>Invite friends to music streaming.</p><a href="https://www.spotify.com/in/affiliate">Sign Up & Start Earning</a></div>
+  </div>
+</section>
+
+  <!-- Reviews -->
+  <section>
+    <h2>User Reviews</h2>
+    <div class="reviews">
+      <div class="review">“EarnSphere made affiliate marketing so easy!” <h4>- Rahul</h4></div>
+      <div class="review">“I love how all referral apps are in one place.” <h4>- Sneha</h4></div>
+      <div class="review">“Clean design, simple to use, and profitable.” <h4>- Arjun</h4></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EarnSphere. All Rights Reserved.</p>
+    <a href="about.html">About</a> | 
+    <a href="terms.html">Terms</a> | 
+    <a href="contact.html">Contact</a> | 
+    <a href="upcoming.html">Upcoming</a> |
+  <a href="social.html">Social media</a> |
+  <a href="guide.html">Guide</a> 
+  </footer>
+
+</body>
+</html>
