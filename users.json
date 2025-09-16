@@ -1,0 +1,7 @@
+[
+  {
+    "email": "owner@example.com",
+    "password": "ownerPassword123",
+    "paymentStatus": true
+  }
+]
