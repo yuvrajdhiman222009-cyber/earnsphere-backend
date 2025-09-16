@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const { Pool } = require('pg');        // Postgres
+const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const Razorpay = require('razorpay');
@@ -12,6 +12,13 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// ---------------- CORS ----------------
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "https://earnsphere.vercel.app";
+app.use(cors({
+  origin: FRONTEND_ORIGIN,
+  credentials: true
+}));
 
 // ---------------- DB CONNECTION ----------------
 const db = new Pool({
@@ -31,22 +38,11 @@ const razorpay = new Razorpay({
 // ---------------- MIDDLEWARES ----------------
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// ---------------- CORS ----------------
-const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "https://earnsphere.vercel.app";
-app.use(cors({
-  origin: FRONTEND_ORIGIN,
-  credentials: true
-}));
-
 app.use(session({
   secret: process.env.SESSION_SECRET || 'change_this_secret',
   resave: false,
   saveUninitialized: true
 }));
-
-// Serve static frontend (optional if using Vercel separately)
-app.use(express.static(path.join(__dirname, '../frontend')));
 
 // ---------------- CREATE USERS TABLE ----------------
 (async () => {
