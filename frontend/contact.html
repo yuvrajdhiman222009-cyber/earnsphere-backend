@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - EarnSphere</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f17;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00f2fe;
+      margin-bottom: 30px;
+    }
+    .contact-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      background: #1c1c28;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 242, 254, 0.15);
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .info h2 {
+      margin-bottom: 15px;
+      color: #4facfe;
+    }
+    .info p {
+      margin: 8px 0;
+      font-size: 15px;
+      color: #ccc;
+    }
+    .info a {
+      color: #00f2fe;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #2a2a3b;
+      color: #fff;
+      font-size: 15px;
+    }
+    textarea {
+      resize: none;
+      min-height: 120px;
+    }
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      opacity: 0.85;
+    }
+    #msg {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #4facfe;
+      text-align: center;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    footer a {
+      color: #00f2fe;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Contact Us - EarnSphere</header>
+
+  <div class="container">
+    <h1>We’d Love to Hear From You</h1>
+    <div class="contact-box">
+
+      <!-- Contact Info -->
+      <div class="info">
+        <h2>Get in Touch</h2>
+        <p>📧 Email: <a href="mailto:itachi52897@gmail.com">itachi52897@gmail.com</a></p>
+        <p>🌐 Website: <a href="#">www.earnsphere.com</a></p>
+        <p>📍 Location: Online - Global Access</p>
+        <p>💡 At EarnSphere, we’re building the future of affiliate opportunities. Reach out for support, collaborations, or queries.</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="msg"></p>
+      </form>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 EarnSphere. All Rights Reserved.</p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="terms.html">Terms</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function(e){
+      e.preventDefault();
+      const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        message: this.message.value
+      };
+
+      const res = await fetch("/contact", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(formData)
+      });
+
+      const text = await res.text();
+      document.getElementById("msg").innerText = text;
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
